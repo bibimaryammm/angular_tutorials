@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row">
+        <div class="col-3 mb-3 card-group" *ngFor="let p of products">
+            <a class="card shadow-lg" routerLink="product-details">
+                <img src="{{p.productImageUrl}}" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5 class="display-5">{{p.productTitle}}</h5>
+                    <div>₹{{p.productDiscountPrice}} M.R.P: <del>₹{{p.productPrice}}</del> ({{p.productDiscount}}% off)</div>
+                </div>
+            </a>
+        </div>
+
+        
+    </div>
+</div>
+<router-outlet></router-outlet>
